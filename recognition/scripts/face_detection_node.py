@@ -104,8 +104,8 @@ class FaceDetectionNode:
 
 	# callback
 	def callback(self, rgb_image_msg, rgb_info_msg, detection_msg):
-	
-		if detection_msg.header.frame_id != self.sensor_name + '_ir_optical_frame':
+		if "/" + detection_msg.header.frame_id != self.sensor_name + '_ir_optical_frame':
+			print detection_msg.header.frame_id
 			print 'frame_ids not matched'
 			return
 

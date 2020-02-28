@@ -1,28 +1,52 @@
 <?xml version="1.0"?>
-<!-- CALIBRATION ID: 1527811056 -->
+<!-- CALIBRATION ID: 1578763922 -->
 <launch>
 
   <!-- Network parameters -->
 
-  <!-- pc: PC2 -->
-  <!-- sensor: kinect02 -->
-  <node pkg="tf" type="static_transform_publisher" name="kinect02_broadcaster"
-        args="1.74838 -2.65512 3.82138 0.881598 0.146995 -0.0488187 -0.445863 /world /kinect02 100" />
-  <node pkg="tf" type="static_transform_publisher" name="kinect02_broadcaster_2"
-        args="0 0 0 1.57 -1.57 0 /kinect02 /kinect02_link 100" />
+  <!-- pc: Entrance -->
+  <!-- sensor: kinectCC -->
+  <node pkg="tf" type="static_transform_publisher" name="kinectCC_broadcaster"
+        args="-5.46552 -3.68916 3.09764 -0.824787 0.108699 -0.146959 0.535083 /world /kinectCC 100" />
+  <node pkg="tf" type="static_transform_publisher" name="kinectCC_broadcaster_2"
+        args="0 0 0 1.57 -1.57 0 /kinectCC /kinectCC_link 100" />
 
-  <!-- pc: PC3 -->
-  <!-- sensor: kinect03 -->
-  <node pkg="tf" type="static_transform_publisher" name="kinect03_broadcaster"
-        args="-1.18029 3.54954 3.76869 -0.166282 0.890955 -0.412891 0.0898399 /world /kinect03 100" />
-  <node pkg="tf" type="static_transform_publisher" name="kinect03_broadcaster_2"
-        args="0 0 0 1.57 -1.57 0 /kinect03 /kinect03_link 100" />
 
-  <!-- pc: PC1 -->
-  <!-- sensor: kinect01 -->
-  <node pkg="tf" type="static_transform_publisher" name="kinect01_broadcaster"
-        args="-2.67177 -2.76412 3.77764 0.875625 -0.247839 0.0487522 -0.411678 /world /kinect01 100" />
-  <node pkg="tf" type="static_transform_publisher" name="kinect01_broadcaster_2"
-        args="0 0 0 1.57 -1.57 0 /kinect01 /kinect01_link 100" />
+  <!-- sensor: kinectBB -->
+  <node pkg="tf" type="static_transform_publisher" name="kinectBB_broadcaster"
+        args="-8.21621 1.88287 1.35262 0.471152 -0.542063 0.616008 -0.323601 /world /kinectBB 100" />
+  <node pkg="tf" type="static_transform_publisher" name="kinectBB_broadcaster_2"
+        args="0 0 0 1.57 -1.57 0 /kinectBB /kinectBB_link 100" />
+
+
+  <!-- pc: Master -->
+  <!-- sensor: kinectAA -->
+  <node pkg="tf" type="static_transform_publisher" name="kinectAA_broadcaster"
+        args="-1.20549 4.06266 2.39219 0.00599304 0.874458 -0.484681 0.0192522 /world /kinectAA 100" />
+  <node pkg="tf" type="static_transform_publisher" name="kinectAA_broadcaster_2"
+        args="0 0 0 1.57 -1.57 0 /kinectAA /kinectAA_link 100" />
+
+
+  <!-- pc: Electronics -->
+  <!-- sensor: kinectEE -->
+  <node pkg="tf" type="static_transform_publisher" name="kinectEE_broadcaster"
+        args="4.37345 3.39255 2.67796 0.314223 0.763913 -0.52302 -0.210124 /world /kinectEE 100" />
+  <node pkg="tf" type="static_transform_publisher" name="kinectEE_broadcaster_2"
+        args="0 0 0 1.57 -1.57 0 /kinectEE /kinectEE_link 100" />
+
+
+  <!-- sensor: kinectFF -->
+  <node pkg="tf" type="static_transform_publisher" name="kinectFF_broadcaster"
+        args="-1.00802 -2.81149 1.97277 -0.818837 -0.100747 0.055081 0.562426 /world /kinectFF 100" />
+  <node pkg="tf" type="static_transform_publisher" name="kinectFF_broadcaster_2"
+        args="0 0 0 1.57 -1.57 0 /kinectFF /kinectFF_link 100" />
+
+
+  <!-- sensor: kinectDD -->
+  <node pkg="tf" type="static_transform_publisher" name="kinectDD_broadcaster"
+        args="3.80762 -3.15345 2.26702 -0.764276 -0.235818 0.127996 0.58642 /world /kinectDD 100" />
+  <node pkg="tf" type="static_transform_publisher" name="kinectDD_broadcaster_2"
+        args="0 0 0 1.57 -1.57 0 /kinectDD /kinectDD_link 100" />
+
 
 </launch>

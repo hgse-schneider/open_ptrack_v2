@@ -66,10 +66,10 @@ class FaceSaverNode:
 			if box.width <= 0:
 				continue
 
-			if tracker_id not in self.id_table:
-				continue
+			#if tracker_id not in self.id_table:
+			#	continue
 
-			results.append([box, tracker_id, self.id_table[tracker_id]])
+			results.append([box, tracker_id, 1])#self.id_table[tracker_id]])
 
 		if len(results) == 0:
 			return
@@ -78,9 +78,9 @@ class FaceSaverNode:
 			image = self.bridge.imgmsg_to_cv2(img_msg)
 		else:
 			image = recutils.decompress(img_msg)
-
+		print 'saving images'
 		for box, tracker_id, face_id in results:
-			dirname = 'face_saver/%02d' % face_id
+			dirname = '~/data/face_saver/%02d' % face_id
 			if not os.path.isdir(dirname):
 				os.makedirs(dirname)
 
@@ -95,7 +95,7 @@ def main():
 	print '--- face_saver ---'
 	rospy.init_node('face_saver_node')
 	# sensor_names = ['kinect2_back_l', 'kinect2_back_r', 'kinect2_front_l', 'kinect2_fr_r', 'kinect2_cent_r']
-	sensor_names = ['kinect2_head', 'kinect2_far', 'kinect2_lenovo']
+	sensor_names = ['kinectAA', 'kinectBB', 'kinectCC', 'kinectDD', 'kinectEE', 'kinectFF']
 	node = FaceSaverNode(sensor_names)
 	rospy.spin()
 

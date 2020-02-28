@@ -10,7 +10,7 @@ world_frame_id: "/world"
 # Voxel size used for people detection:
 voxel_size: 0.06
 # Flag stating if extrinsic (multicamera) calibration has been performed or not:
-extrinsic_calibration: false
+extrinsic_calibration: true
 
 ########################
 ## Sensor orientation ##

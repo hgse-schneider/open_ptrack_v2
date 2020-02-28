@@ -70,7 +70,7 @@ class FaceFeatureExtractionNode:
 
 	# callback
 	def callback(self, rgb_image_msg, detection_msg):
-		if self.sensor_name not in detection_msg.header.frame_id:
+		if "/" + detection_msg.header.frame_id != self.sensor_name + '_ir_optical_frame':
 			print 'frame ids conflicted!!'
 			return
 

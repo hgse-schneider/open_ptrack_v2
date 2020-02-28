@@ -224,6 +224,11 @@ void callback(const Image::ConstPtr& rgb_image,
 		int i;
 		for(i = 0; i < boxes->num; i++)
 		{
+			std::string object_name(names[boxes->boxes[i].classID]);
+			if (object_name != "person")
+			{
+				continue;
+			}
 			int medianX = boxes->boxes[i].x + (boxes->boxes[i].w / 2);
 			int medianY = boxes->boxes[i].y + (boxes->boxes[i].h / 2);
 			// If the detect box coordinat is near edge of image, it will return a error 'Out of im.size().'
@@ -245,7 +250,7 @@ void callback(const Image::ConstPtr& rgb_image,
 			}			
 //float medianDepth = _depth_image.at<float>(medianY, medianX) / 1000.0f;
 			
-			std::string object_name(names[boxes->boxes[i].classID]);  
+			//std::string object_name(names[boxes->boxes[i].classID]);  
 				    
 			std::stringstream ss;
 			ss << object_name << ":" << medianDepth; //  << " " << mm_factor;
